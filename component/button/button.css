@@ -1,3 +1,37 @@
+/* html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    text-align: left;
+    color: #444;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.4em;
+    font-size: 1em;
+}
+
+p {
+    text-align: left;
+    color: #444;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    margin: 0 0 2em;
+} */
+
+.ph-nav * {
+    margin: 0;
+    padding: 0;
+}
+
 .ph-btn {
     display: flex;
     flex-direction: row;

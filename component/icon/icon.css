@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
 /*
-any-container {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    font-family: "Open Sans", sans-serif;
-    place-items: center;
-    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+any {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
 }
-
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
 */
 
 .ph-ico * {
