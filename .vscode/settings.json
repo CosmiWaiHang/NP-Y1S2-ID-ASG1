@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    ".resource": true,
+    ".gitignore": true
+  }
+}
