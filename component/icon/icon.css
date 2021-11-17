@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+/*
+any-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    place-items: center;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+*/
+
+.ph-ico * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ph-ico *:focus,
+.ph-ico *:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ph-ico {
+    display: inline-flex;
+}
+
+.ph-ico .ico {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ph-ico .ico-tip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ph-ico .ico-tip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ph-ico .ico:hover .ico-tip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.ph-ico .ico:hover span,
+.ph-ico .ico:hover .ico-tip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ph-ico .facebook:hover,
+.ph-ico .facebook:hover .ico-tip,
+.ph-ico .facebook:hover .ico-tip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+
+.ph-ico .twitter:hover,
+.ph-ico .twitter:hover .ico-tip,
+.ph-ico .twitter:hover .ico-tip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+
+.ph-ico .instagram:hover,
+.ph-ico .instagram:hover .ico-tip,
+.ph-ico .instagram:hover .ico-tip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+}
+
+.ph-ico .github:hover,
+.ph-ico .github:hover .ico-tip,
+.ph-ico .github:hover .ico-tip::before {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.ph-ico .youtube:hover,
+.ph-ico .youtube:hover .ico-tip,
+.ph-ico .youtube:hover .ico-tip::before {
+    background-color: #de463b;
+    color: #ffffff;
+}
