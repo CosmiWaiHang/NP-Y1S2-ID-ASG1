@@ -1,0 +1,91 @@
+#nav-top {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1200px) {
+    #nav-mobile span {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-mb-overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .nav-mb-overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .nav-mb-overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #515151;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav-mb-overlay a:hover, .nav-mb-overlay a:focus {
+        color: #FFF;
+    }
+
+    .nav-mb-overlay .closebtn {
+        position: absolute;
+        font-size: 60px;
+        top: 15px;
+        right: 35px;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav span {
+        margin: 0.5em 1em;
+    }
+
+    nav div#nav-mobile {
+        display: flex;
+    }
+
+    nav div#nav-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+    nav div#nav-mobile {
+        display: none;
+    }
+
+    nav div#nav-desktop {
+        display: flex;
+    }
+
+    .nav-signup {
+        flex-shrink: 2;
+    }
+
+    .nav-page {
+        flex-shrink: 1;
+    }
+}
