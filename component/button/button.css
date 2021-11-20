@@ -58,12 +58,15 @@ p {
     cursor: pointer;
     font-size: 14px;
     font-weight: 400;
-    line-height: 4vh;
-    max-width: 160px;
+    line-height: 5vh;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
     width: 100%;
+    max-width: 160px;
+    min-height: 4vh;
+    max-height: 80px;
+    align-items: center;
 }
 
 .btn:hover {
