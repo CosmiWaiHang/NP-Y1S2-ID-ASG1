@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-control" content="private" />
+    <title>Home</title>
+    <meta name="description" content="Welcome to homepage for Canime" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="../../component/button/button.css" />
+    <link rel="stylesheet" href="../../component/background/background.css" />
+    <link rel="stylesheet" href="../../component/navbar/navbar.css" />
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Cache-control" content="private">
-        <title>Home</title>
-        <meta name="description" content="Welcome to homepage for Canime">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./home.css">
-        <link rel="stylesheet" href="../../component/button/button.css">
-        <link rel="stylesheet" href="../../component/background/background.css">
-        <link rel="stylesheet" href="../../component/navbar/navbar.css">
-    </head>
+  <body>
+    <nav id="nav-top"></nav>
+    <canvas></canvas>
 
-    <body>
-        <nav id="nav-top"></nav>
-        <canvas></canvas>
+    <!-- @HACK: GO DYNAMIC IF HAVE TIME -->
+    <!-- Wrapper -->
+    <figure class="ph-img-wrp">
+      <!-- Images Area -->
+      <div class="ph-img-area">
+        <img
+          src="../../asset/image/Attack On Titan.jpg"
+          alt="Attack on Titan"
+          class="activeImg"
+        />
+        <img
+          src="../../asset/image/FullMetal Alchemist.jpg"
+          alt="FullMetal Achemist"
+        />
+        <img src="../../asset/image/Gintama.jpg" alt="Gintama" />
+        <img src="../../asset/image/Steins;Gate.jpg" alt="Steins;Gate" />
+        <img
+          src="../../asset/image/The Evening Sun.jpg"
+          alt="The Evening Sun"
+        />
+      </div>
+      <!-- Pagination Area -->
+      <div class="ph-pg-area"></div>
+    </figure>
+    <!-- End Wrapper -->
 
-        <script src="./home.js" async defer></script>
-        <script src="../../component/background/background.js" async defer></script>
-        <script src="../../component/navbar/navbar.js" async defer></script>
-    </body>
-
+    <script src="./home.js" async defer></script>
+    <script src="../../component/background/background.js" async defer></script>
+    <script src="../../component/navbar/navbar.js" async defer></script>
+  </body>
 </html>
