@@ -1,99 +1,105 @@
 #nav-top {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 999;
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
 }
 
 @media only screen and (max-width: 770px) {
-    #nav-mobile span {
-        font-size: 30px;
-        cursor: pointer;
-    }
+  #nav-mobile span {
+    font-size: 30px;
+    cursor: pointer;
+  }
 
-    .nav-mb-overlay {
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #000;
-        overflow-y: hidden;
-        transition: 0.5s;
-    }
+  .nav-mb-overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
 
-    .nav-mb-overlay-content {
-        position: relative;
-        top: 25%;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
+  .nav-mb-overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
 
-    .nav-mb-overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: #515151;
-        display: block;
-        transition: 0.3s;
-    }
+  .nav-mb-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #515151;
+    display: block;
+    transition: 0.3s;
+  }
 
-    .nav-mb-overlay a:hover,
-    .nav-mb-overlay a:focus {
-        color: #fff;
-    }
+  .nav-mb-overlay a:hover,
+  .nav-mb-overlay a:focus {
+    color: #fff;
+  }
 
-    .nav-mb-overlay .closebtn {
-        position: absolute;
-        font-size: 60px;
-        top: 15px;
-        right: 35px;
-    }
+  .nav-mb-overlay .closebtn {
+    position: absolute;
+    font-size: 60px;
+    top: 15px;
+    right: 35px;
+  }
 
-    nav {
-        justify-content: flex-start;
-    }
+  nav {
+    justify-content: flex-start;
+  }
 
-    nav span {
-        margin: 0.5em 1em;
-    }
+  nav span {
+    margin: 0.5em 1em;
+  }
 
-    nav div#nav-mobile {
-        display: flex;
-    }
+  nav div#nav-mobile {
+    display: flex;
+    color:#FFF;
+    margin: 2vh 1vh;
+  }
 
-    nav div#nav-desktop {
-        display: none;
-    }
+  nav div#nav-desktop {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 770px) {
-    nav {
-        justify-content: space-evenly;
-    }
+  nav {
+    justify-content: space-evenly;
+  }
 
-    nav div#nav-mobile {
-        display: none;
-    }
+  nav div#nav-mobile {
+    display: none;
+  }
 
-    nav div#nav-desktop {
-        display: flex;
-        align-content: space-around;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: inherit;
-        margin: 2.5vh 0vh;
-    }
+  nav div#nav-desktop {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+    margin: 2.5vh 0vh;
+  }
 
-    .nav-signup {
-        flex-shrink: 2;
-    }
+  .nav-signup {
+    flex-shrink: 2;
+  }
 
-    .nav-page {
-        flex-shrink: 1;
-    }
+  .nav-page {
+    flex-shrink: 1;
+  }
 }

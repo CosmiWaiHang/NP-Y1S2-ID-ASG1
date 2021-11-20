@@ -23,25 +23,25 @@ function addNavBarElement() {
     <div id="nav-desktop">
         <div class="ph-btn nav-signup">
             <div class="ph-btn-ctn">
-                <a href="https://twitter.com/masuwa1018" class="btn btn-efct-cln btn-outline" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
+                <a href="../signup/signup.html" class="btn btn-efct-cln btn-outline" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
             </div>
         </div>
         <div class="ph-btn nav-page">
             <div class="ph-btn-ctn">
-                <a href="https://twitter.com/masuwa1018" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
+                <a href="../signup/signup.html" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
             </div>
             <div class="ph-btn-ctn">
-                <a href="https://twitter.com/masuwa1018" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank">
+                <a href="../signup/signup.html" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank">
                     <span>HOVER</span>
                 </a>
             </div>
             <div class="ph-btn-ctn">
-                <a href="https://twitter.com/masuwa1018" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
+                <a href="../signup/signup.html" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
             </div>
         </div>
         <div class="ph-btn nav-signup">
             <div class="ph-btn-ctn">
-                <a href="https://twitter.com/masuwa1018" class="btn btn-efct-cln btn-outline" data-sm-link-text="CLICK">
+                <a href="../signup/signup.html" class="btn btn-efct-cln btn-outline" data-sm-link-text="CLICK">
                     <span>HOVER</span>
                 </a>
             </div>
@@ -58,7 +58,7 @@ function addNavBarCss() {
         link.id = cssId;
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = '../../component/navigation/navigation.css';
+        link.href = '../../component/navbar/navbar.css';
         link.media = 'all';
         head.appendChild(link);
     }
