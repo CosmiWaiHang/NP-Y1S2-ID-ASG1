@@ -3,8 +3,6 @@
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  z-index: 999;
-  position: absolute;
   top: 0vh;
   left: 0vw;
 }
@@ -89,10 +87,11 @@
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: inherit;
     margin: 2.5vh 0vh;
+    padding: 2vh 2.5vw;
   }
 
   .nav-signup {

@@ -1,7 +1,7 @@
-const STAR_COUNT = (window.innerWidth + window.innerHeight) / 16;
-const STAR_SIZE = 3;
-const STAR_MIN_SCALE = 0.2;
-const OVERFLOW_THRESHOLD = 50;
+const STAR_COUNT = (window.innerWidth + window.innerHeight) / 64;
+const STAR_SIZE = 8;
+const STAR_MIN_SCALE = 0.1;
+const OVERFLOW_THRESHOLD = 32;
 
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
