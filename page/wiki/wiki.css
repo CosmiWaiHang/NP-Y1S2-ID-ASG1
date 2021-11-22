@@ -62,7 +62,7 @@ hr {
    */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: "Zen Kurenaido", sans-serif; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -105,7 +105,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: "Zen Kurenaido", sans-serif; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -348,4 +348,70 @@ template {
 
 [hidden] {
   display: none;
+}
+
+/*********************************************************************************************************************************
+ *                                                                                                                               *
+ *                                                           Normalize End                                                       *
+ *                                                                                                                               *
+ *********************************************************************************************************************************/
+body {
+  color: wheat;
+}
+
+#section-anime-synopsis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5vh 5vw;
+}
+
+#section-anime-synopsis > #figure-anime > #image-anime {
+  width: 20vw;
+  height: 45vh;
+  object-fit: cover;
+  min-width: 400px;
+  min-height: 550px;
+}
+
+#section-anime-synopsis > section > #article-anime {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 18px;
+  font-weight: 250;
+  letter-spacing: 0.02em;
+}
+
+#section-anime-synopsis > section > #article-anime > header > h1 {
+  font-size: 3em;
+}
+
+#nav-anime-external-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#nav-anime-external-link .ph-btn {
+  width: 95%;
+}
+
+#nav-anime-external-link .ph-btn .ph-btn-ctn {
+  width: 95%;
+}
+
+#nav-anime-external-link .ph-btn .ph-btn-ctn a {
+  /* Disable the inherited max width */
+  max-width: none;
 }
