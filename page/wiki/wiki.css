@@ -415,3 +415,63 @@ body {
   /* Disable the inherited max width */
   max-width: none;
 }
+
+/*********************************************************************************************************************************
+ *                                                                                                                               *
+ *                                                          Top Section End                                                      *
+ *                                                                                                                               *
+ *********************************************************************************************************************************/
+
+#ph-news-and-character {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw;
+}
+
+#ph-news-and-character #section-news {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 20vw;
+  padding: 0vh 5vw 2.5vh;
+}
+
+#ph-news-and-character #section-news article figure img {
+  border-style: none;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#ph-news-and-character #section-news article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+  padding: 1.5vh 0vw;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#ph-news-and-character #section-news article:hover {
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+}
+
+#ph-news-and-character #section-news article header {
+  margin: 0vh 1vw;
+}
+
+#ph-news-and-character #section-news h3,
+#ph-news-and-character #section-news p {
+  text-align: center;
+}
