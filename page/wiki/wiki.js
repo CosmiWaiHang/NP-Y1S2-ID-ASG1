@@ -57,8 +57,8 @@ function getAnimeById(id, executable) {
 }
 
 /**
- * Get the anime news by the give id,
- * Then execute the given fucntino when the opration is done.
+ * Get the anime news by the give anime id,
+ * Then execute the given function when the operation is done.
  *
  * @param {string} id - Id of the anime
  * @param {function} executable - Use to execute when the ready state change to 4 (note: 4 represent the request operation have completed)
@@ -69,6 +69,13 @@ function getAnimeNewsById(id, executable) {
   setupRequest(link, executable);
 }
 
+/**
+ * Get the anime characters by the give anime id,
+ * Then execute the given function when the operation is done.
+ * 
+ * @param {string} id - Id of the anime
+ * @param {function} executable - Use to execute when the ready state change to 4 (note: 4 represent the request operation have completed)
+ */
 function getAnimeCharactersById(id, executable) {
   const link = `https://api.jikan.moe/v3/anime/${id}/characters_staff`;
 
@@ -81,6 +88,7 @@ function getAnimeCharactersById(id, executable) {
  * @param {object} linkList - A list of external link and name.
  */
 function addExternalLinkButton(linkList) {
+  //! Use for random hover text to motivate the user to click
   const wordList = ["Seize", "Go", "Click", "Snag", "Grip"];
   const placeholder = document.querySelector("#nav-anime-external-link");
 
@@ -88,25 +96,8 @@ function addExternalLinkButton(linkList) {
     const link = linkList[i];
     const randomNumber = Math.floor(Math.random() * 5);
 
-    const outerDiv = document.createElement("div");
-    outerDiv.className = "ph-btn";
-
-    const innerDiv = document.createElement("div");
-    innerDiv.className = "ph-btn-ctn";
-
-    const anchor = document.createElement("a");
-    anchor.href = link["url"];
-    anchor.className = "btn btn-efct-cln";
-    anchor.setAttribute("data-sm-link-text", `${wordList[randomNumber]}! ;\`)`);
-    anchor.target = "_anime_external_link";
-
-    const span = document.createElement("span");
-    span.textContent = link["name"];
-
-    anchor.appendChild(span);
-    innerDiv.appendChild(anchor);
-    outerDiv.appendChild(innerDiv);
-    placeholder.appendChild(outerDiv);
+    const button = new Button(false, link["url"], `${wordList[randomNumber]}! ;\`)`, link["name"], false);
+    placeholder.appendChild(button.me);
   }
 }
 
@@ -176,6 +167,11 @@ function addNewsCard(newsList) {
   }
 }
 
+/**
+ * Add the charaters image and the details
+ * 
+ * @param {object} characterList - A json object containing all the detail of all the characters
+ */
 function addCharacterCard(characterList) {
   const placeholder = document.querySelector("#ph-news-and-character #section-characters");
 
@@ -221,7 +217,7 @@ function addCharacterCard(characterList) {
 
 /*********************************************************************************************************************************
  *                                                                                                                               *
- *                                                      Function based object                                                    *
+ *                                              Function based object (I mean CLASS)                                             *
  *                                                                                                                               *
  *********************************************************************************************************************************/
 
