@@ -169,6 +169,10 @@ function addNewsCard(newsList) {
     header.appendChild(p);
     article.appendChild(header);
 
+    //! Handle author button
+    const button = new Button(false, news["author_url"], "Biu~", news["author_name"], true);
+    article.appendChild(button.me);
+
     //! Finalized
     placeholder.appendChild(article);
     count++;
@@ -188,7 +192,18 @@ function addCharacterCard(characterList) {
     image.src = character["image_url"];
     image.alt = character["name"];
 
-    figure.appendChild(image);
+    //! Anchor: Add tooltip and redirect onClick
+    const anchor = document.createElement("a");
+    anchor.href = character["url"];
+    anchor.target = "blank";
+
+    const span = document.createElement("span");
+    span.textContent = "Click :-)";
+    span.className = "tooltip";
+
+    anchor.appendChild(span);
+    anchor.appendChild(image);
+    figure.appendChild(anchor);
     article.appendChild(figure);
 
     //! Character role and name
@@ -205,6 +220,66 @@ function addCharacterCard(characterList) {
     //! Finalized
     placeholder.appendChild(article);
   }
+}
+
+/*********************************************************************************************************************************
+ *                                                                                                                               *
+ *                                                      Function based object                                                    *
+ *                                                                                                                               *
+ *********************************************************************************************************************************/
+
+class Button {
+  constructor(hasOutline, navTo, hoverText, text, isBlink) {
+    this.hasOutline = hasOutline;
+    this.navTo = navTo;
+    this.hoverText = hoverText;
+    this.text = text;
+    this.isBlink = isBlink;
+  }
+
+  get me() {
+    const outer = this.#getOuterDiv();
+    const inner = this.#getInnerDiv();
+    const anchor = this.#getAnchor();
+    const span = this.#getSpan();
+
+    anchor.appendChild(span);
+    inner.appendChild(anchor);
+    outer.appendChild(inner);
+
+    return outer;
+  }
+
+  #getOuterDiv = () => {
+    const div = document.createElement("div");
+    div.className = "ph-btn";
+
+    return div;
+  };
+
+  #getInnerDiv = () => {
+    const div = document.createElement("div");
+    div.className = "ph-btn-ctn";
+
+    return div;
+  };
+
+  #getAnchor = () => {
+    const anchor = document.createElement("a");
+    anchor.href = this.navTo;
+    anchor.className = `btn btn-efct-cln ${this.hasOutline ? "btn-outline" : ""} ${this.isBlink ? "btn-blink" : ""}`;
+    anchor.setAttribute("data-sm-link-text", this.hoverText);
+    anchor.target = "blank";
+
+    return anchor;
+  };
+
+  #getSpan = () => {
+    const span = document.createElement("span");
+    span.textContent = this.text;
+
+    return span;
+  };
 }
 
 /*********************************************************************************************************************************
