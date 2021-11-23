@@ -113,12 +113,32 @@ function addExternalLinkButton(linkList) {
   }
 }
 
+/**
+ * Add the news to the wikipage.
+ *
+ * @param {object} newsList - A list of news link.
+ */
 function addNewsCard(newsList) {
   let count = 0;
   const placeholder = document.querySelector("#ph-news-and-character #section-news");
 
+  //! Remove the loading canvas
+  const canvas = document.querySelector("#canvas-loading");
+  placeholder.removeChild(canvas);
+
+  //! No news? Hint them!
+  if (0 == newsList.length) {
+    const p = document.createElement("p");
+    p.textContent = "There is no news about this anime yet ;(";
+    p.style = "width: 15vw;";
+    placeholder.appendChild(p);
+
+    //! Stop function continue executing, no point
+    return;
+  }
+
   //! Only add maximium 3 news article
-  for (let i = 0; i < newsList.length && count < 3; i++) {
+  for (let i = 0; i < newsList.length && count < 30; i++) {
     const news = newsList[i];
 
     //! Don't add the news when there is no image
@@ -152,6 +172,38 @@ function addNewsCard(newsList) {
     //! Finalized
     placeholder.appendChild(article);
     count++;
+  }
+}
+
+function addCharacterCard(characterList) {
+  const placeholder = document.querySelector("#ph-news-and-character #section-characters");
+
+  for (let i = 0; i < characterList.length; i++) {
+    const character = characterList[i];
+    const article = document.createElement("article");
+
+    //! Character image
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    image.src = character["image_url"];
+    image.alt = character["name"];
+
+    figure.appendChild(image);
+    article.appendChild(figure);
+
+    //! Character role and name
+    const header = document.createElement("header");
+    const h3 = document.createElement("h3");
+    const p = document.createElement("p");
+
+    h3.textContent = character["name"];
+    p.textContent = character["role"];
+    header.appendChild(h3);
+    header.appendChild(p);
+    article.appendChild(header);
+
+    //! Finalized
+    placeholder.appendChild(article);
   }
 }
 
@@ -202,5 +254,7 @@ function addNewsCard(newsList) {
   const url = document.URL;
   const id = getLinkParamValue(url, "id");
 
-  getAnimeCharactersById(id, (response) => {});
+  getAnimeCharactersById(id, (response) => {
+    addCharacterCard(response["characters"]);
+  });
 })();

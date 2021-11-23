@@ -436,11 +436,15 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 0vh 1vw;
+  overflow-y: scroll;
+  min-height: 750px;
+  max-height: 1000px;
+  height: 100vh;
   align-items: center;
-  align-content: center;
-  width: 20vw;
-  padding: 0vh 5vw 2.5vh;
+  min-width: min-content;
 }
 
 #ph-news-and-character #section-news article figure img {
@@ -448,7 +452,7 @@ body {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 5%;
 }
 
 #ph-news-and-character #section-news article {
@@ -473,5 +477,45 @@ body {
 
 #ph-news-and-character #section-news h3,
 #ph-news-and-character #section-news p {
+  text-align: center;
+}
+
+/**** Hide scroll bar **/
+#ph-news-and-character section {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/**** Hide scroll bar **/
+#ph-news-and-character section::-webkit-scrollbar {
+  display: none;
+}
+
+/*********************************************************************************************************************************
+ *                                                                                                                               *
+ *                                                          News Section End                                                     *
+ *                                                                                                                               *
+ *********************************************************************************************************************************/
+
+#ph-news-and-character #section-characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  min-height: 750px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+
+#ph-news-and-character #section-characters img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: scale-down;
+}
+#ph-news-and-character #section-characters article header {
   text-align: center;
 }
