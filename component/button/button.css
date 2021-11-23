@@ -29,94 +29,109 @@ p {
 
 .ph-btn,
 .ph-btn * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .ph-btn {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 }
 
 .ph-btn-ctn {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    min-width: 110px;
-    width: 10vw
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 110px;
+  width: 10vw;
 }
 
 .btn {
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 5vh;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100%;
-    max-width: 160px;
-    min-height: 4vh;
-    max-height: 80px;
-    align-items: center;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 5vh;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 160px;
+  min-height: 4vh;
+  max-height: 80px;
+  align-items: center;
 }
 
 .btn:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btn-efct-cln {
-    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
-    display: var(--uismLinkDisplay);
-    color: #FFF;
-    position: relative;
-    transition-duration: 0.4s;
-    overflow: hidden;
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+  display: var(--uismLinkDisplay);
+  color: #fff;
+  position: relative;
+  transition-duration: 0.4s;
+  overflow: hidden;
 }
 
 .btn-efct-cln::before,
 .btn-efct-cln span {
-    margin: 0 auto;
-    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-    transition-duration: 0.4s;
+  margin: 0 auto;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
 }
 
 .btn-efct-cln:hover {
-    background-color: #FFF;
+  background-color: #fff;
 }
 
 .btn-efct-cln:hover span {
-    -webkit-transform: translateY(-400%) scale(-0.1, 20);
-    transform: translateY(-400%) scale(-0.1, 20);
+  -webkit-transform: translateY(-400%) scale(-0.1, 20);
+  transform: translateY(-400%) scale(-0.1, 20);
 }
 
 .btn-efct-cln::before {
-    content: attr(data-sm-link-text);
-    color: #000;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    -webkit-transform: translateY(500%) scale(-0.1, 20);
-    transform: translateY(500%) scale(-0.1, 20);
+  content: attr(data-sm-link-text);
+  color: #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(500%) scale(-0.1, 20);
+  transform: translateY(500%) scale(-0.1, 20);
 }
 
 .btn-efct-cln:hover::before {
-    letter-spacing: 0.05em;
-    -webkit-transform: translateY(0) scale(1, 1);
-    transform: translateY(0) scale(1, 1);
+  letter-spacing: 0.05em;
+  -webkit-transform: translateY(0) scale(1, 1);
+  transform: translateY(0) scale(1, 1);
 }
 
 .btn-outline {
-    outline-color: #FFF;
-    outline-style: solid;
-    outline-width: 2px;
+  outline-color: #fff;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+.btn-blink {
+  animation: animated-border 2s infinite;
+}
+.btn-blink:hover {
+  animation-direction: reverse;
 }

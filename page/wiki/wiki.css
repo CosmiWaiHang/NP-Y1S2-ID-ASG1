@@ -433,17 +433,17 @@ body {
 }
 
 #ph-news-and-character > div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #ph-news-and-character > div > h1 {
-    text-decoration-line: underline;
-    font-size: 3.5em;
+  text-decoration-line: underline;
+  font-size: 3.5em;
 }
 
 #ph-news-and-character #section-news {
@@ -534,4 +534,3 @@ body {
 #ph-news-and-character #section-characters article header {
   text-align: center;
 }
-
