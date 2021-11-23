@@ -3,7 +3,7 @@ const STAR_SIZE = 8;
 const STAR_MIN_SCALE = 0.1;
 const OVERFLOW_THRESHOLD = 32;
 
-const canvas = document.querySelector('canvas');
+const canvas = document.querySelector('canvas#canvas-background');
 const context = canvas.getContext('2d');
 
 let scale = 1, width, height;
