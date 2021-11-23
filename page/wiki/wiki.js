@@ -72,7 +72,7 @@ function getAnimeNewsById(id, executable) {
 /**
  * Get the anime characters by the give anime id,
  * Then execute the given function when the operation is done.
- * 
+ *
  * @param {string} id - Id of the anime
  * @param {function} executable - Use to execute when the ready state change to 4 (note: 4 represent the request operation have completed)
  */
@@ -169,7 +169,7 @@ function addNewsCard(newsList) {
 
 /**
  * Add the charaters image and the details
- * 
+ *
  * @param {object} characterList - A json object containing all the detail of all the characters
  */
 function addCharacterCard(characterList) {
