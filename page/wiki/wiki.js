@@ -294,6 +294,10 @@ class Button {
     image.src = response["image_url"];
     image.alt = response["title_japanese"];
 
+    //! Handle anchor
+    const anchor = figure.querySelector("#anchor-anime");
+    anchor.href = `../review/review.html?id=${id}`;
+
     //! Handle Article
     const article = section.querySelector("#article-anime");
     const header = article.querySelector("header > h1");

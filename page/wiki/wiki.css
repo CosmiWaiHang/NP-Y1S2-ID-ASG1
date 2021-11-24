@@ -369,7 +369,7 @@ body {
   padding: 1.5vh 5vw;
 }
 
-#section-anime-synopsis > #figure-anime > #image-anime {
+#section-anime-synopsis > #figure-anime > #anchor-anime > #image-anime {
   width: 20vw;
   height: 45vh;
   object-fit: cover;
@@ -586,7 +586,9 @@ body {
     flex-wrap: wrap;
     padding: 0vh 1vw;
     overflow-y: scroll;
-    height: 100vh;
+    height: 50vh;
+    min-height: min-content;
+    max-height: max-content;
   }
 
   #ph-news-and-character #section-news article {
@@ -595,6 +597,11 @@ body {
 
   #ph-news-and-character #section-news h3 {
     min-height: 3em;
+  }
+
+  #ph-news-and-character #section-news p {
+    min-height: 6em;
+    text-align: center;
   }
 
   #ph-news-and-character #section-characters {
