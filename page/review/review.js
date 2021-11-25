@@ -84,6 +84,19 @@ function getAnimeReviewById(id, executable) {
   setupRequest(link, executable);
 }
 
+/**
+ * Get the anime detail by the given id,
+ * Then execute the given function when the operation is done.
+ *
+ * @param {string} id - Id of the anime
+ * @param {function} executable - Use to execute when the ready state change to 4 (note: 4 represent the request operation have completed)
+ */
+function getAnimeById(id, executable) {
+  const link = `https://api.jikan.moe/v3/anime/${id}`;
+
+  setupRequest(link, executable);
+}
+
 function getEmoticon() {
   const emoticonArr = ["ヾ(≧▽≦*)o", "o(*≧▽≦)ツ", "～(￣▽￣～)(～￣▽￣)～", "<(￣︶￣)>", "︿(￣︶￣)︿", "o(￣▽￣)ｄ", "*´∀`)´∀`)*´∀`)*´∀`)", "(｡･∀･)ﾉﾞ", "(๑•̀ㅂ•́)و✧", "ヾ(≧∇≦*)ゝ", "(u‿ฺu✿ฺ)", "（゜▽＾*））", "(*^▽^*)", "ヽ(✿ﾟ▽ﾟ)ノ", "♪(^∇^*)", "(≧∀≦)ゞ", "(๑¯∀¯๑)", "φ(≧ω≦*)♪", "(　ﾟ∀ﾟ) ﾉ♡"];
   const random = Math.floor(Math.random() * emoticonArr.length);
@@ -288,4 +301,11 @@ class Button {
 
     addReview(reviewArr);
   });
+})();
+
+(function () {
+  const url = document.URL;
+  const id = getLinkParamValue(url, "id");
+
+  getAnimeById(id, (response) => (document.querySelector("#anime-name-and-epsiode header h1").textContent = response["title_japanese"]));
 })();

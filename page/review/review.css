@@ -367,7 +367,7 @@ template {
   justify-content: flex-start;
   align-items: center;
   overflow-y: scroll;
-  width: 35%;
+  width: 50%;
 }
 
 /**** Hide scroll bar **/
@@ -445,6 +445,20 @@ template {
    *                                                                                                                               *
    *********************************************************************************************************************************/
 
+#anime-name-and-epsiode header h1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: space-around;
+  font-size: -webkit-xxx-large;
+}
+
+#anime-name-and-epsiode {
+  padding: 1vh 2vw;
+}
+
 #section-image-and-episode,
 #review {
   display: flex;
@@ -461,7 +475,7 @@ template {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: fit-content;
 }
