@@ -38,6 +38,7 @@ function setupRequest(link, executable) {
       //* Call the given function and pass the response to the given function
       executable(response);
       console.log(response);
+      console.log(link);
     }
   };
 
@@ -66,6 +67,19 @@ function getAnimeEpisodesById(id, executable) {
  */
 function getAnimePictureById(id, executable) {
   const link = `https://api.jikan.moe/v3/anime/${id}/pictures`;
+
+  setupRequest(link, executable);
+}
+
+/**
+ * Get the anime review by the given anime id,
+ * Then execute the given function when the operation is done.
+ *
+ * @param {string} id - Id of the anime
+ * @param {function} executable - Use to execute when the ready state change to 4 (note: 4 represent the request operation have completed)
+ */
+function getAnimeReviewById(id, executable) {
+  const link = `https://api.jikan.moe/v3/anime/${id}/reviews`;
 
   setupRequest(link, executable);
 }
@@ -124,6 +138,56 @@ function addEpisodeButton(episodeArr) {
     button = new Button(hasOutline, navTo, hoverText, text, isBlink);
 
     placeholder.appendChild(button.me);
+  }
+}
+
+function addReview(reviewArr) {
+  const placeholder = document.getElementById("review");
+
+  for (const review of reviewArr) {
+    const article = document.createElement("article");
+
+    //! Handle profile picture of the user
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+
+    image.src = review["reviewer"]["image_url"];
+    image.alt = review["reviewer"]["username"];
+    figure.appendChild(image);
+    article.appendChild(figure);
+
+    //! Handle review given by the user
+    const section = document.createElement("section");
+
+    //* Handle the username and review posted time
+    const header = document.createElement("header");
+    const h1 = document.createElement("h1");
+    const time = document.createElement("time");
+
+    h1.textContent = review["reviewer"]["username"];
+    time.textContent = review["date"];
+
+    header.appendChild(h1);
+    header.appendChild(time);
+    section.appendChild(header);
+
+    //* Handle the review
+    const detail = document.createElement("details");
+    const summary = document.createElement("summary");
+    const p = document.createElement("p");
+
+    summary.textContent = "Says: ";
+    p.textContent = review["content"];
+
+    detail.append(summary);
+    detail.append(p);
+    detail["open"] = true;
+
+    section.appendChild(detail);
+    article.append(section);
+
+    //! Add the html
+    placeholder.appendChild(article);
   }
 }
 
@@ -212,5 +276,16 @@ class Button {
     const episodesArr = response["episodes"];
 
     addEpisodeButton(episodesArr);
+  });
+})();
+
+(function () {
+  const url = document.URL;
+  const id = getLinkParamValue(url, "id");
+
+  getAnimeReviewById(id, (response) => {
+    const reviewArr = response["reviews"];
+
+    addReview(reviewArr);
   });
 })();

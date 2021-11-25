@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  color: wheat;
 }
 
 /**
@@ -444,7 +445,8 @@ template {
    *                                                                                                                               *
    *********************************************************************************************************************************/
 
-#section-image-and-episode {
+#section-image-and-episode,
+#review {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -462,4 +464,40 @@ template {
   justify-content: center;
   align-items: center;
   width: fit-content;
+}
+
+#review {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#review article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#review article section header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#review article section header time {
+  padding-left: 3vw;
+}
+
+#review article figure img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
