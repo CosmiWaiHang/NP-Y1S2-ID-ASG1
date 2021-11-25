@@ -368,6 +368,7 @@ template {
   align-items: center;
   overflow-y: scroll;
   width: 50%;
+  min-width: fit-content;
 }
 
 /**** Hide scroll bar **/
@@ -467,7 +468,7 @@ template {
   align-content: center;
   justify-content: center;
   align-items: center;
-  padding: 1vh 5vw;
+  padding: 1vh 1vw 1vh 5vw;
 }
 
 #section-image-and-episode #epsiode {
@@ -515,3 +516,52 @@ template {
   height: 150px;
   object-fit: cover;
 }
+
+#epsiode .ph-btn .ph-btn-ctn {
+  width: 9vw;
+}
+
+/***********************************************************************************************************************************
+   *                                                                                                                               *
+   *                                                             Review End                                                        *
+   *                                                                                                                               *
+   *********************************************************************************************************************************/
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#section-recommendation {
+  display: flex;
+  padding: 1vh 5vw 1vh 1vw;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+  min-height: min-content;
+}
+
+#section-recommendation aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 1vh 1vw;
+}
+
+#section-recommendation aside:hover,
+#review article a figure img:hover {
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+}
+
+/***********************************************************************************************************************************
+   *                                                                                                                               *
+   *                                                         Recommendations End                                                   *
+   *                                                                                                                               *
+   *********************************************************************************************************************************/

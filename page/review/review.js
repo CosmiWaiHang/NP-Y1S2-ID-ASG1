@@ -97,6 +97,25 @@ function getAnimeById(id, executable) {
   setupRequest(link, executable);
 }
 
+/**
+ * Get the anime detail by the given id,
+ * Then execute the given function when operation is done.
+ *
+ * @param {string} id - Id of the anime
+ * @param {function} executable - Use to execute when the ready state change to 4 (note: 4 represent the request operation have completed)
+ */
+function getAnimeRecommendationsById(id, executable) {
+  const link = `https://api.jikan.moe/v3/anime/${id}/recommendations`;
+
+  setupRequest(link, executable);
+}
+
+/**
+ * Generate random number within the array length
+ * Then get and return the emoticon from the array
+ *
+ * @returns Random emoticon
+ */
 function getEmoticon() {
   const emoticonArr = ["ヾ(≧▽≦*)o", "o(*≧▽≦)ツ", "～(￣▽￣～)(～￣▽￣)～", "<(￣︶￣)>", "︿(￣︶￣)︿", "o(￣▽￣)ｄ", "*´∀`)´∀`)*´∀`)*´∀`)", "(｡･∀･)ﾉﾞ", "(๑•̀ㅂ•́)و✧", "ヾ(≧∇≦*)ゝ", "(u‿ฺu✿ฺ)", "（゜▽＾*））", "(*^▽^*)", "ヽ(✿ﾟ▽ﾟ)ノ", "♪(^∇^*)", "(≧∀≦)ゞ", "(๑¯∀¯๑)", "φ(≧ω≦*)♪", "(　ﾟ∀ﾟ) ﾉ♡"];
   const random = Math.floor(Math.random() * emoticonArr.length);
@@ -163,11 +182,15 @@ function addReview(reviewArr) {
     //! Handle profile picture of the user
     const figure = document.createElement("figure");
     const image = document.createElement("img");
+    const a = document.createElement("a");
 
     image.src = review["reviewer"]["image_url"];
     image.alt = review["reviewer"]["username"];
+    a.href = review["reviewer"]["url"];
+
     figure.appendChild(image);
-    article.appendChild(figure);
+    a.appendChild(figure);
+    article.appendChild(a);
 
     //! Handle review given by the user
     const section = document.createElement("section");
@@ -201,6 +224,37 @@ function addReview(reviewArr) {
 
     //! Add the html
     placeholder.appendChild(article);
+  }
+}
+
+function addRecommendations(recommendationArr) {
+  const placeholder = document.getElementById("section-recommendation");
+
+  for (const recommendation of recommendationArr) {
+    const aside = document.createElement("aside");
+
+    //! Image
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    const a = document.createElement("a");
+
+    //! Redirection
+    a.href = recommendation["url"];
+
+    image.src = recommendation["image_url"];
+    image.alt = recommendation["title"];
+    figure.appendChild(image);
+    a.appendChild(figure);
+    aside.appendChild(a);
+
+    //! Title
+    const header = document.createElement("header");
+    const h3 = document.createElement("h3");
+    h3.textContent = recommendation["title"];
+    header.appendChild(h3);
+    aside.appendChild(header);
+
+    placeholder.appendChild(aside);
   }
 }
 
@@ -308,4 +362,15 @@ class Button {
   const id = getLinkParamValue(url, "id");
 
   getAnimeById(id, (response) => (document.querySelector("#anime-name-and-epsiode header h1").textContent = response["title_japanese"]));
+})();
+
+(function () {
+  const url = document.URL;
+  const id = getLinkParamValue(url, "id");
+
+  getAnimeRecommendationsById(id, (response) => {
+    const recommendationArr = response["recommendations"];
+
+    addRecommendations(recommendationArr);
+  });
 })();
