@@ -9,10 +9,8 @@
  */
 
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -58,12 +56,9 @@ h1 {
    */
 
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -72,10 +67,8 @@ hr {
    */
 
 pre {
-  font-family: "Zen Kurenaido", sans-serif;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -95,12 +88,9 @@ a {
    */
 
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -120,10 +110,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: "Zen Kurenaido", sans-serif;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -164,7 +152,6 @@ sup {
 
 img {
   border-style: none;
-  object-fit: cover;
 }
 
 /* Forms
@@ -180,14 +167,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -262,18 +245,12 @@ fieldset {
    */
 
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -299,10 +276,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -320,10 +295,8 @@ textarea {
    */
 
 [type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -340,10 +313,8 @@ textarea {
    */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -384,298 +355,179 @@ template {
   display: none;
 }
 
-/************************************************************************
-*                                                                       *
-*                             Normalize End                             * 
-*                                                                       *
-************************************************************************/
+/***********************************************************************************************************************************
+   *                                                                                                                               *
+   *                                                           Normalize End                                                       *
+   *                                                                                                                               *
+   *********************************************************************************************************************************/
 
-/* Main Rules */
-:root {
-  --white-c: #fff;
-  --black-c: #000;
-  --body-background-c: #fd7ac0;
-  --wrapper-background-c: #d4f1f4;
-  --wrapper-shadow-c: rgba(0, 0, 0, 0.219);
-  --buttons-background-c: rgba(255, 255, 255, 0.219);
-  --buttons-active-background-c: rgba(135, 207, 235, 0.493);
-}
-
-.ph-img-wrp * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* End Main Rules */
-
-/* Wrapper */
-.ph-img-wrp {
-  background-color: var(--wrapper-background-c);
-  box-shadow: 0 0 80px var(--wrapper-shadow-c);
-  margin: 0px;
-  opacity: 0.35;
-  position: absolute;
+.slider {
+  z-index: -1;
   top: 0;
   left: 0;
-  z-index: -1;
+  position: fixed;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  opacity: 0.2;
+}
+
+.slider img {
+  width: 100%;
   height: 100vh;
-  width: 100vw;
+  object-fit: cover;
 }
 
-/* Images Area */
-.ph-img-area {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  overflow: hidden;
+.slider figure {
+  margin: 0px;
 }
 
-.ph-img-area img {
-  min-width: 100vw;
-  transition: 1s cubic-bezier(0.79, 0.03, 0, 0.99);
-}
-
-/* Pagination Area */
-.ph-pg-area {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-/* Pagination Spans */
-.ph-pg-area span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--white-c);
-  margin-right: 5px;
-  transform: scale(0.5);
-  transition: 1s ease-in-out;
-  opacity: 0.4;
-}
-
-/* Current Active Span */
-.ph-pg-area span.active {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* End Wrapper */
-
-/************************************************************************
-*                                                                       *
-*                             Slideshow End                             * 
-*                                                                       *
-************************************************************************/
-
-.anime-card-ctn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 4px 16px;
-  color: #fff;
-}
-
-#top-anime-cards-ctn,
-#genre-anime-cards-ctn {
-  overflow: hidden;
-  margin: 20px;
-}
-
-.anime-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: fit-content;
-}
-
-.anime-card {
-  /* Add shadows to create the "card" effect */
-  -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  width: 235px;
-  margin: 1vh 1vw;
-  border-radius: 5%;
-}
-
-.anime-card:hover {
-  -webkit-box-shadow: 0 8px 16px 0 #fff;
-  box-shadow: 0 8px 16px 0 #fff;
-  cursor: pointer;
-}
-
-.anime-card img {
-  min-height: 200px;
-  height: 25vh;
-  display: inline-block;
-  border-radius: 5%;
-}
-
-#top-anime-card-slide-left-container,
-#genre-anime-card-slide-left-container,
-#top-anime-card-slide-right-ctn,
-#genre-anime-card-slide-right-ctn {
+.slider .anime-img-slider {
   display: none;
 }
 
-#top-anime-card-slide-left-container.active,
-#genre-anime-card-slide-left-container.active,
-#top-anime-card-slide-right-ctn.active,
-#genre-anime-card-slide-right-ctn.active {
-  display: block;
-  cursor: pointer;
+.slider .active {
+  background-color: #717171;
 }
 
-.anime-card-slide-left,
-.anime-card-slide-right {
-  border-color: #fff;
-  border-style: solid;
-  height: 20px;
-  width: 20px;
-  margin-top: 30%;
+/* Fading animation */
+.slider .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-.anime-card-slide-left {
-  border-width: 4px 0 0 4px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin-left: 1vw;
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.anime-card-slide-right {
-  border-width: 4px 4px 0 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  margin-left: 1vw;
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-#top-anime-card-ctn,
-#genre-anime-card-ctn {
-  padding: 0vh 1vw;
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 770px) {
+  .text {
+    font-size: 11px;
+  }
 }
 
-#top-anime-card-ctn h1,
-#genre-anime-card-ctn h1 {
-  padding-left: 5vw;
-  margin: 2vh 0vw 0vh 0vw;
-  line-height: 3vh;
-  color: #fff;
-  font-weight: 200;
-  font-size: 5vh;
-  letter-spacing: 0.1em;
-  text-decoration-line: underline;
+/***********************************************************************************************************************************
+   *                                                                                                                               *
+   *                                                        Anime Slider End                                                       *
+   *                                                                                                                               *
+   *********************************************************************************************************************************/
+
+ul#selector {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0vh 7vw;
 }
 
-/************************************************************************
-*                                                                       *
-*                             CardSlide End                             * 
-*                                                                       *
-************************************************************************/
-
-.menu-001 {
-  color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px 10px 0 0;
-  width: 17em;
-  z-index: 1;
-  position: absolute;
-  right: 5vw;
-  max-height: 0vh;
+ul#selector > li {
+  min-width: max-content;
+  width: 10vw;
+  min-height: max-content;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
-.filter-001 {
-  color: rgb(255, 94, 0);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 10px 10px;
-  width: 17em;
-  margin-top: 0;
-  margin-left: 00.5rem;
-  margin-bottom: 0;
-}
-
-.category-001 {
-  border-bottom: solid 1px rgb(189, 189, 189);
-  padding: 10px;
-
-  box-shadow: 0 1px 2px 0 rgba(165, 165, 165, 0.2);
-}
-
-.filter-header {
-  padding: 10px;
-  margin: 0;
-  background: rgb(56, 56, 56);
-  color: white;
-  box-shadow: 0 1px 2px 0 rgba(165, 165, 165, 0.2);
-  background: linear-gradient(0deg, rgba(56, 56, 56, 1) 0%, rgba(0, 0, 0, 1) 75%);
-}
-
-.category-001:hover {
-  background-color: rgb(207, 115, 28);
-  color: rgb(255, 255, 255);
-}
-
-.category-001 > p {
-  margin: 0;
-}
-
-.subcategory {
-  background-color: rgba(255, 255, 255, 0.45);
-  height: 0;
-  margin: 0;
-  transition-timing-function: ease;
-  transition: height 2s;
-  overflow: hidden;
-}
-
-.dropdown-001:hover .subcategory {
-  height: 160px;
-}
-
-.subcategory > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: black;
-}
-
-.subcategory > ul > li {
-  border-bottom: solid 1px transparent;
-  padding: 10px;
-  box-shadow: 0 1px 2px 0 rgba(165, 165, 165, 0.2);
-  margin: 0;
-  height: 1.25vh;
-  min-height: 18px;
-  max-height: 25px;
-}
-
-.subcategory > ul > li:hover {
+ul#selector > li.active {
   background-color: #fff;
   color: #000;
 }
 
-.subcategory:hover {
-  display: block;
-  overflow-y: scroll;
+ul#selector > li.active,
+ul#selector > li:hover {
+  border: #fff solid 1px;
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
 }
 
-#genre-anime-card-ctn .ph-genre-title {
+/***********************************************************************************************************************************
+   *                                                                                                                               *
+   *                                                          Selector End                                                         *
+   *                                                                                                                               *
+   *********************************************************************************************************************************/
+
+#anime {
+  padding: 0vh 7vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  align-content: flex-end;
+  align-content: space-around;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
+}
+
+#anime > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+}
+
+#anime header h1 {
+  padding: 5vh 0vw 0vh;
+}
+
+#anime figure {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  height: 575px;
+  width: 80vw;
+  overflow-x: scroll;
+}
+
+#anime figure article {
+  padding: 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#anime figure article img {
+  width: 250px;
+  height: 425px;
+  object-fit: cover;
+  min-width: 200px;
+  min-height: 300px;
+  max-width: 250px;
+  max-height: 425px;
+}
+
+#anime figure article h3 {
+  width: 250px;
+  height: 3em;
+}
+
+#anime figure article:hover {
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
 }

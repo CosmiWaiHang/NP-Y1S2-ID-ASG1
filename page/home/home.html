@@ -25,8 +25,28 @@
     <nav id="nav-top"></nav>
     <!--! End Top Navigation Bar -->
 
-    <!-- -->
-    <!-- -->
+    <!-- Anime Slider -->
+    <section class="slider" id="anime-slider"></section>
+    <!-- End Anime Slider -->
+
+    <!-- Selector -->
+    <ul id="selector">
+      <li value="1" onclick="updateGenre('action')">Action</li>
+      <li value="2" onclick="updateGenre('adventure')">Adventure</li>
+      <li value="4" onclick="updateGenre('comedy')">Comedy</li>
+      <li value="6" onclick="updateGenre('demons')">Demons</li>
+      <li value="24" onclick="updateGenre('sci fi')">Sci Fi</li>
+      <li value="31" onclick="updateGenre('super power')">Super Power</li>
+      <li value="32" onclick="updateGenre('vampire')">Vampire</li>
+      <li value="37" onclick="updateGenre('supernatural')">Supernatural</li>
+    </ul>
+    <!-- End Selector -->
+
+    <!-- Anime -->
+    <section id="anime">
+      <!--? Image to be ADDED from javascript -->
+    </section>
+    <!-- End Anime-->
 
     <!--! Meteorshower -->
     <canvas id="canvas-background"></canvas>
@@ -34,7 +54,6 @@
 
     <!--* Javascript -->
     <script src="../../component/background/background.js" async defer></script>
-    <script src="../../component/loading/loading.js" async defer></script>
     <script src="../../component/navbar/navbar.js" async defer></script>
     <script src="./home.js" async defer></script>
     <!--* End Javascript -->
