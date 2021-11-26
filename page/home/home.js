@@ -80,8 +80,6 @@ function updateSliderArrowsStatus(elementPart) {
   let currLocation = $(cardsContainer).scrollLeft() + containerWidth;
   let max = document.querySelector(`#${elementPart}-anime-cards-ctn > div.anime-cards`).scrollWidth * 0.8;
 
-  console.log(currLocation);
-  console.log(max);
   if (currLocation < max) {
     $(`#${elementPart}-anime-card-slide-right-ctn`).addClass("active");
   } else {

@@ -22,6 +22,11 @@ html {
 
 body {
   margin: 0;
+  color: wheat;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 18px;
+  font-weight: 250;
+  letter-spacing: 0.02em;
 }
 
 /**
@@ -355,10 +360,6 @@ template {
    *                                                           Normalize End                                                       *
    *                                                                                                                               *
    *********************************************************************************************************************************/
-body {
-  color: wheat;
-}
-
 #section-anime-synopsis {
   display: flex;
   flex-direction: row;
@@ -384,10 +385,6 @@ body {
   align-content: space-around;
   justify-content: space-around;
   align-items: flex-start;
-  font-family: "Zen Kurenaido", sans-serif;
-  font-size: 18px;
-  font-weight: 250;
-  letter-spacing: 0.02em;
 }
 
 #section-anime-synopsis > section > #article-anime > header > h1 {
@@ -551,10 +548,6 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    font-family: "Zen Kurenaido", sans-serif;
-    font-size: 18px;
-    font-weight: 250;
-    letter-spacing: 0.02em;
   }
 
   #nav-anime-external-link {

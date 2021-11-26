@@ -37,8 +37,6 @@ function setupRequest(link, executable) {
       const response = JSON.parse(this.responseText);
       //* Call the given function and pass the response to the given function
       executable(response);
-      console.log(response);
-      console.log(link);
     }
   };
 

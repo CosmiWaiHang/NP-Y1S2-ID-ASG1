@@ -23,6 +23,10 @@ html {
 body {
   margin: 0;
   color: wheat;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 18px;
+  font-weight: 250;
+  letter-spacing: 0.02em;
 }
 
 /**
@@ -63,7 +67,7 @@ hr {
    */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: "Zen Kurenaido", sans-serif; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -106,7 +110,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: "Zen Kurenaido", sans-serif; /* 1 */
   font-size: 1em; /* 2 */
 }
 
