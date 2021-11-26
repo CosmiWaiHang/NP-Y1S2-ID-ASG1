@@ -1,116 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Cache-control" content="private" />
-    <title>Home</title>
-    <meta name="description" content="Welcome to homepage for Canime" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--* Stylesheet -->
     <link rel="stylesheet" href="../../component/button/button.css" />
     <link rel="stylesheet" href="../../component/background/background.css" />
     <link rel="stylesheet" href="../../component/navbar/navbar.css" />
+    <link rel="stylesheet" href="../../component/hover/hover.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <!--! External Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet" />
+    <!--* End Stylesheet -->
+
+    <title>Home</title>
   </head>
 
   <body>
+    <!--! Top Navigation Bar -->
     <nav id="nav-top"></nav>
-    <canvas></canvas>
+    <!--! End Top Navigation Bar -->
 
-    <!-- @HACK: GO DYNAMIC IF HAVE TIME -->
-    <!-- Wrapper -->
-    <figure class="ph-img-wrp">
-      <!-- Images Area -->
-      <div class="ph-img-area">
-        <img
-          src="../../asset/image/Attack On Titan.jpg"
-          alt="Attack on Titan"
-          class="activeImg"
-        />
-        <img
-          src="../../asset/image/FullMetal Alchemist.jpg"
-          alt="FullMetal Achemist"
-        />
-        <img src="../../asset/image/Gintama.jpg" alt="Gintama" />
-        <img src="../../asset/image/Steins;Gate.jpg" alt="Steins;Gate" />
-        <img
-          src="../../asset/image/The Evening Sun.jpg"
-          alt="The Evening Sun"
-        />
-      </div>
-      <!-- Pagination Area -->
-      <div class="ph-pg-area"></div>
-    </figure>
-    <!-- End Wrapper -->
+    <!-- -->
+    <!-- -->
 
-    <!-- Top Anime List -->
-    <div id="top-anime-card-ctn">
-      <h1>Top</h1>
-      <div class="anime-card-ctn">
-        <div id="top-anime-card-slide-left-container">
-          <div class="anime-card-slide-left"></div>
-        </div>
-        <div id="top-anime-cards-ctn">
-          <div class="anime-cards">
-            <!-- Anime Card to be Added Here -->
-          </div>
-        </div>
+    <!--! Meteorshower -->
+    <canvas id="canvas-background"></canvas>
+    <!--! End Meteorshower -->
 
-        <div id="top-anime-card-slide-right-ctn">
-          <div class="anime-card-slide-right"></div>
-        </div>
-      </div>
-    </div>
-    <!-- End Top Anime List-->
-
-    <!-- Genre Anime List-->
-    <div id="genre-anime-card-ctn">
-      <div class="ph-genre-title">
-        <h1>Genre</h1>
-        <div class="menu-001">
-          <div class="dropdown-001">
-            <div class="category-001" id="active-subcat">
-              <p value="1" >Action</p>
-            </div>
-            <div class="subcategory">
-              <ul>
-                <li value="1">Action</li>
-                <li value="2">Adventure</li>
-                <li value="4">Comedy</li>
-                <li value="6">Demons</li>
-                <li value="24">Sci Fi</li>
-                <li value="31">Super Power</li>
-                <li value="32">Vampire</li>
-                <li value="37">Supernatural</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="anime-card-ctn">
-        <div id="genre-anime-card-slide-left-container">
-          <div class="anime-card-slide-left"></div>
-        </div>
-        <div id="genre-anime-cards-ctn">
-          <div class="anime-cards">
-            <!-- Anime Card to be Added Here -->
-          </div>
-        </div>
-
-        <div id="genre-anime-card-slide-right-ctn">
-          <div class="anime-card-slide-right"></div>
-        </div>
-      </div>
-    </div>
-    <!-- End Genre Anime List -->
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="./home.js" async defer></script>
+    <!--* Javascript -->
     <script src="../../component/background/background.js" async defer></script>
+    <script src="../../component/loading/loading.js" async defer></script>
     <script src="../../component/navbar/navbar.js" async defer></script>
+    <script src="./home.js" async defer></script>
+    <!--* End Javascript -->
   </body>
 </html>
