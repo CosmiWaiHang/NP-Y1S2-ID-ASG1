@@ -10,10 +10,9 @@ function addNavBarElement() {
         <div id="ph-nav-mb" class="nav-mb-overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="nav-mb-overlay-content">
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <a href="https://github.com/CossetCosmi" target="_blank">Github</a>
+                <a href="../home/home.html">Homepage</a>
+                <a href="https://www.linkedin.com/in/cosmidulianjun/" target="_blank">LinkedIn</a>
             </div>
         </div>
     </div>
@@ -21,26 +20,24 @@ function addNavBarElement() {
     <div id="nav-desktop">
         <div class="ph-btn nav-signup">
             <div class="ph-btn-ctn">
-                <a href="../signup/signup.html" class="btn btn-efct-cln btn-outline" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
-            </div>
-        </div>
-        <div class="ph-btn nav-page">
-            <div class="ph-btn-ctn">
-                <a href="../signup/signup.html" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
-            </div>
-            <div class="ph-btn-ctn">
-                <a href="../signup/signup.html" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank">
-                    <span>HOVER</span>
+                <a href="https://github.com/CossetCosmi" class="btn btn-efct-cln btn-outline" data-sm-link-text="ヾ(≧∇≦*)ゝ" target="_blank">
+                    <span>Github</span>
                 </a>
             </div>
+        </div>
+
+        <div class="ph-btn nav-page">
             <div class="ph-btn-ctn">
-                <a href="../signup/signup.html" class="btn btn-efct-cln" data-sm-link-text="CLICK" target="_blank"><span>HOVER</span></a>
+                <a href="../home/home.html" class="btn btn-efct-cln" data-sm-link-text="(u‿ฺu✿ฺ)" target="_blank">
+                    <span>Homepage</span>
+                </a>
             </div>
         </div>
+
         <div class="ph-btn nav-signup">
             <div class="ph-btn-ctn">
-                <a href="../signup/signup.html" class="btn btn-efct-cln btn-outline" data-sm-link-text="CLICK">
-                    <span>HOVER</span>
+                <a href="https://www.linkedin.com/in/cosmidulianjun/" class="btn btn-efct-cln btn-outline" data-sm-link-text="(๑•̀ㅂ•́)و✧">
+                    <span>LinkedIn</span>
                 </a>
             </div>
         </div>
