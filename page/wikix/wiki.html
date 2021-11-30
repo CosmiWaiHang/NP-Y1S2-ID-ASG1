@@ -22,14 +22,66 @@
 
   <body>
     <!--! Top Navigation Bar -->
-    <nav id="nav-top"></nav>
+    <nav id="nav-top">
+      <div id="nav-mobile">
+        <span onclick="openNav()">☰ &nbsp; Canime</span>
+        <div id="ph-nav-mb" class="nav-mb-overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <div class="nav-mb-overlay-content">
+            <a href="https://github.com/CossetCosmi" target="_blank">Github</a>
+            <a href="../home/home.html">Homepage</a>
+            <a href="https://www.linkedin.com/in/cosmidulianjun/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="nav-desktop">
+        <div class="ph-btn nav-signup">
+          <div class="ph-btn-ctn">
+            <a href="https://github.com/CossetCosmi" class="btn btn-efct-cln btn-outline" data-sm-link-text="ヾ(≧∇≦*)ゝ" target="_blank">
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ph-btn nav-page">
+          <div class="ph-btn-ctn">
+            <a href="../homex/home.html" class="btn btn-efct-cln" data-sm-link-text="(u‿ฺu✿ฺ)" target="_blank">
+              <span>Homepage</span>
+            </a>
+          </div>
+        </div>
+        <div class="ph-btn nav-page">
+          <div class="ph-btn-ctn">
+            <a href="../wikix/wiki.html" class="btn btn-efct-cln" data-sm-link-text="(u‿ฺu✿ฺ)" target="_blank">
+              <span>Wikipage</span>
+            </a>
+          </div>
+        </div>
+        <div class="ph-btn nav-page">
+          <div class="ph-btn-ctn">
+            <a href="../reviewx/review.html" class="btn btn-efct-cln" data-sm-link-text="(u‿ฺu✿ฺ)" target="_blank">
+              <span>Reviewpage</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ph-btn nav-signup">
+          <div class="ph-btn-ctn">
+            <a href="https://www.linkedin.com/in/cosmidulianjun/" class="btn btn-efct-cln btn-outline" data-sm-link-text="(๑•̀ㅂ•́)و✧">
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <!--! End Top Navigation Bar -->
 
     <!--* Anime Synopsis -->
     <section id="section-anime-synopsis">
       <!--* Anime Figure -->
       <figure id="figure-anime">
-        <a id="anchor-anime" href="../review/review.html?id=16498">
+        <a id="anchor-anime" href="../reviewx/review.html">
           <!--! WARN: HACKED -->
           <img id="image-anime" class="btn-blink" src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="進撃の巨人" />
         </a>
@@ -884,8 +936,6 @@
 
     <!--* Javascript -->
     <script src="../../component/background/background.js" async="" defer=""></script>
-    <script src="../../component/loading/loading.js" async="" defer=""></script>
-    <script src="../../component/navbar/navbar.js" async="" defer=""></script>
     <script src="./wiki.js" async="" defer=""></script>
     <!--* End Javascript -->
   </body>
