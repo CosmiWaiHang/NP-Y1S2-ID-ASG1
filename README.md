@@ -7,6 +7,12 @@ The [GitHub Deployment Page](https://cosmiwaihang.github.io/NP-Y1S2-ID-ASG1/page
 
 This page has been tested in all major web browsers, with the best visual appears obtained in Microsoft Edge Version 96.0.1054.34 (Official build) (64-bit)
 
+## Major Changes
+
+Initially, I planned to add data from JavaScript, but after consulting with Mr. Andy Ng, he suggested that the page be static and that what we learned in lessons 5 and 6 be used in ID Assignment II. As a result, I created a few new folders with the suffix char 'x', such as homex, reviewx, and wikix, to house all of the static pages.
+
+When we visit the homepage, we must click on the "Cancel" button to access a static page.
+
 ## Objective
 
 The main goal of this website is to promote anime culture and help users learn more about their favorite anime. Furthermore, this website is intended to be a resource for anyone looking for anime news, reviews, and recommendations, as well as anyone interested in learning more about a specific character from an anime series.
