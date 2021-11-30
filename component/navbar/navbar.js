@@ -4,7 +4,10 @@ window.onload = () => {
 };
 
 function addNavBarElement() {
-  document.getElementById("nav-top").innerHTML = `
+  const nav = document.getElementById("nav-top");
+
+  if ("" == nav.innerHTML) {
+    nav.innerHTML = `
     <div id="nav-mobile">
         <span onclick="openNav()">&#9776; &nbsp; Canime</span>
         <div id="ph-nav-mb" class="nav-mb-overlay">
@@ -43,6 +46,7 @@ function addNavBarElement() {
         </div>
     </div>
     `;
+  }
 }
 
 function addNavBarCss() {

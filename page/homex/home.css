@@ -531,3 +531,13 @@ ul#selector > li:hover {
 #anime figure article:hover {
   box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
 }
+
+@media screen and (max-width: 770px) {
+  ul#selector {
+    justify-content: space-between;
+  }
+  
+  ul#selector > li {
+    min-width: 125px;
+  }
+}
