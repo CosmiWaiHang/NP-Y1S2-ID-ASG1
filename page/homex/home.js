@@ -18,9 +18,9 @@ function updateImage() {
       "https://cdn.myanimelist.net/images/anime/10/47347.jpg", 
       "https://cdn.myanimelist.net/images/anime/1223/96541.jpg", 
       "https://cdn.myanimelist.net/images/anime/13/17405.jpg", 
-      "https://cdn.myanimelist.net/images/anime/11/39717.jpg",
-      "https://cdn.myanimelist.net/images/anime/11/65185.jpg",
-  ]
+      "https://cdn.myanimelist.net/images/anime/11/39717.jpg", 
+      "https://cdn.myanimelist.net/images/anime/11/65185.jpg"
+  ];
 
   const random = Math.floor(Math.random() * linkArr.length);
 

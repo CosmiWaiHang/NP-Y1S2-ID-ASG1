@@ -139,7 +139,7 @@ function addGenreAnime(animeList) {
 
 /** If internet not requiest, static webpage */
 (function () {
-  const isInternetAllow = confirm("Request data from server? TEACHER CLICK CANCEL!");
+  const isInternetAllow = confirm("Request data from server? TEACHER CLICK CANCEL TO VISIT STATIC WEBSITE!");
 
   if (!isInternetAllow) {
     window.location.href = "../homex/home.html";
