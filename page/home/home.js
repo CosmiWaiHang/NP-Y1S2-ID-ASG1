@@ -137,6 +137,15 @@ function addGenreAnime(animeList) {
  *                                                                                                                               *
  *********************************************************************************************************************************/
 
+/** If internet not requiest, static webpage */
+(function () {
+  const isInternetAllow = confirm("Request data from server? TEACHER CLICK CANCEL!");
+
+  if (!isInternetAllow) {
+    window.location.href = "../homex/home.html";
+  }
+})();
+
 /**
  * Add the image to the background slider and initialize the slider
  */
