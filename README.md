@@ -7,7 +7,7 @@ The [GitHub Deployment Page](https://cosmiwaihang.github.io/NP-Y1S2-ID-ASG1/page
 
 This page has been tested in all major web browsers, with the best visual appears obtained in Microsoft Edge Version 96.0.1054.34 (Official build) (64-bit)
 
-## Major Changes
+## !Important Major Updates
 
 Initially, I planned to add data from JavaScript, but after consulting with Mr. Andy Ng, he suggested that the page be static and that what we learned in lessons 5 and 6 be used in ID Assignment II. As a result, I created a few new folders with the suffix char 'x', such as homex, reviewx, and wikix, to house all of the static pages.
 
