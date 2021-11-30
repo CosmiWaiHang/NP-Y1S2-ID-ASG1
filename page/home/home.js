@@ -150,7 +150,7 @@ function addGenreAnime(animeList) {
  * Add the image to the background slider and initialize the slider
  */
 (function () {
-  const filenameArr = ["Attack On Titan.jpg", "FullMetal Alchemist.jpg", "Gintama.jpg", "Steins;Gate.jpg", "The Evening Sun.jpg"];
+  const filenameArr = ["AttackOnTitan.jpg", "FullMetalAlchemist.jpg", "Gintama.jpg", "Steins;Gate.jpg", "TheEveningSun.jpg"];
   const container = document.getElementById("anime-slider");
 
   for (const filename of filenameArr) {
